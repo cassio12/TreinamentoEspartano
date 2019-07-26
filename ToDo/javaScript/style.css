@@ -1,0 +1,19 @@
+/* Define uma visualização mais limpa para tabelas */
+table { 
+	border-collapse: collapse; 
+}
+td, th { 
+	border: 1px solid black; 
+	padding: 3px 8px; 
+}
+th { 
+	text-align: left; 
+}
+
+
+
+/*.form {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+}*/
