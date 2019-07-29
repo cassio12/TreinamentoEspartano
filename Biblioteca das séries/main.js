@@ -66,7 +66,6 @@ function handerMain(){
 
 			}
 			console.log(series)
-			//innerHTML = series
 		})
 	//zerando valores dos inputs 
 		input.value = ''
@@ -85,7 +84,7 @@ function handerMain(){
 			}
 		})
 	});
-	//adicionando evento ao botão de pesquisa
+//adicionando evento ao botão de pesquisa
 	btnpesquisa.addEventListener("click", function(){
 	//evita que o botão reinicie a pagia toda vez que é clicado
 		event.preventDefault();
@@ -105,11 +104,16 @@ function handerMain(){
   			serieSelect.innerHTML = '<h1>Série não encontrada</h1>' 
   			cont++
   		}
+  		// if(textPesqui === undefined){
+  		// 	serieSelect.innerHTML = '<h1>Série não encontrada</h1>'
+  		// }
+  		// if(textPesqui == ''){
+  		// 	serieSelect.innerHTML = '<h1>Insira uma série</h1>' 
+  		// }
   		else{
   			serieSelect.innerHTML = '<h1>' + titulos[cont] + '</h1>' + '<p>' + descricao[cont] + '</p>'
   			console.log('é')
   			console.log('titulos',titulos[cont])
-  			cont++
   		}
   	}
   	//zerando valores dos inputs 
