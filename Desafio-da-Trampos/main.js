@@ -101,42 +101,31 @@ function renderMain(){
 			}
 		}
 	]
-	// console.log(dados[9].opportunity.id == 149902)
+	
 	console.log('dados', dados);
 	let cont = 0;
-	let nItens = dados.length;
-	let opportunity = [];
+	let nObj = dados.length;
 	let idsVaga = [];
-	let namesVaga = [];
-	let horas = [];
-	let companyName = [];
-	let permalink = [];
-	//console.log(nItens)
-	for (let i = 0; i <= nItens; i++) {
-		opportunity = dados[cont].opportunity
-		idsVaga = dados[cont].opportunity.id
-		namesVaga = dados[cont].opportunity.name;
-		horas = dados[cont].opportunity.published_at;
-		companyName = dados[cont].opportunity.company_name;
-		permalink = dados[cont].opportunity.permalink;
-		//console.log(nItens)
-		//console.log(idsVaga) 	
+	// console.log(opportunity)
+	
+	for (let i = 0; i <= nObj; i++) {
 		//console.log(namesVaga)
-		//console.log(idsVaga)
-
-		if (idsVaga.length == 10){
-			console.log(namesVaga)
-			console.log('foi')
+		idsVaga = dados[cont].opportunity.id
+		console.log(idsVaga)
+		if (idsVaga == dados[cont].opportunity.id){
+			console.log(dados[cont].opportunity.name)
+			console.log(dados[cont].opportunity.published_at)
+			console.log(dados[cont].opportunity.company_name)
+			console.log(dados[cont].opportunity.permalink)
 		}
 		else{
-			console.log('não foi')
+			console.log('não é 	')
 		}
-		// console.log(namesVaga)
-		// console.log(cont)
-		// console.log(i)
-		cont++
+		// console.log(idsVaga) 	
 		// console.log(opportunity)
+		cont++
 	}
-	console.log(idsVaga)
+	// console.log(opportunity)
+	// console.log(idsVaga)
 }
 document.onload = renderMain()

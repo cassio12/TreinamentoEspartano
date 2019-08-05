@@ -1,0 +1,64 @@
+.box--title{
+	width: 30%;
+}
+.box--title_text{
+	height: 50px; 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	background-color:#241f1c; 
+	color: #fff;  
+	font-size: 1.3em;
+	margin: 0px; 
+}
+.box--title_box--logo{
+	background-color: #241f1c; 
+}
+.box--logo_img{
+	width: 40%; 
+	height: 50px; 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	color: #fff; 
+	font-size: 1em;
+	margin: 0;
+}
+.box--title_form--vagas{
+	height: 200px;
+	display: flex;
+	flex-direction: row;
+	overflow:scroll;
+	overflow:auto;	
+}
+.box--title_form--vagas::-webkit-scrollbar {
+   width: 6px;
+   background: #55504d;
+}
+.box--title_form--vagas::-webkit-scrollbar-thumb {
+	height: 30%;
+    background: #dcdcdc;
+}
+.form--vagas_boxbar--colorful{
+	width: 100%;
+}
+.boxbar--colorful_pink{
+	width: 2%;
+	height: 50px;
+	background-color: #e95e73;	
+}
+.boxbar--colorful_blue{
+	width: 2%;
+	height: 50px;
+	background-color: #51c2c6;
+}
+.boxbar--colorful_green{
+	width: 2%;
+	height: 50px;
+	background-color: #e1c233;
+}
+.boxbar--colorful_orange{
+	width: 2%;
+	height: 50px;
+	background-color: #ff8100;
+}
