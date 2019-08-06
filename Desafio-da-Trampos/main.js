@@ -101,26 +101,47 @@ function renderMain(){
 			}
 		}
 	]
-	
+
 	console.log('dados', dados);
+	let listaDeVagas = document.getElementById('listaDeVagas')
+	let ulLista = document.createElement('ul')
 	let cont = 0;
+	let array = ['ola','tchau','quem','como']
 	let nObj = dados.length;
 	let idsVaga = [];
-	// console.log(opportunity)
+	listaDeVagas.appendChild(ulLista)
+	console.log(ulLista)
 	
+	ulLista.style.height = "auto"
+	// ulLista.style.listStyle = "none"
+	ulLista.style.margin = "0"
+	ulLista.style.display = "flex"
+	ulLista.style.flexDirection = "column"
+
+
 	for (let i = 0; i <= nObj; i++) {
-		//console.log(namesVaga)
-		idsVaga = dados[cont].opportunity.id
-		console.log(idsVaga)
-		if (idsVaga == dados[cont].opportunity.id){
-			console.log(dados[cont].opportunity.name)
-			console.log(dados[cont].opportunity.published_at)
-			console.log(dados[cont].opportunity.company_name)
-			console.log(dados[cont].opportunity.permalink)
-		}
-		else{
-			console.log('não é 	')
-		}
+		let text = document.createElement('p')
+		// text.style.fontSize = "1em"
+		namesVaga = dados[cont].opportunity.name
+		text = document.createTextNode(namesVaga)
+		let liLista = document.createElement('li')
+		liLista.style.height = "8.5vh"
+		liLista.appendChild(text)
+		ulLista.appendChild(liLista)
+		// liLista.appendChild(idsVaga)
+		// console.log(idsVaga) 
+		liLista = document.createTextNode('array[cont]')
+		// console.log(liLista) 
+		console.log(namesVaga)
+		// if (idsVaga == dados[cont].opportunity.id){
+		// 	console.log(dados[cont].opportunity.name)
+		// 	console.log(dados[cont].opportunity.published_at)
+		// 	console.log(dados[cont].opportunity.company_name)
+		// 	console.log(dados[cont].opportunity.permalink)
+		// }
+		// else{
+		// 	console.log('não é 	')
+		// }
 		// console.log(idsVaga) 	
 		// console.log(opportunity)
 		cont++

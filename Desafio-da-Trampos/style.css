@@ -1,31 +1,36 @@
 .box--title{
 	width: 30%;
 }
-.box--title_text{
-	height: 50px; 
+.box--title_box--text{
+	height: 8vh; 
 	display: flex; 
 	justify-content: center; 
 	align-items: center; 
 	background-color:#241f1c; 
+}
+.box--title_text{
+	width: 85%;
 	color: #fff;  
-	font-size: 1.3em;
+	font-size: 1em;
+	font-family: 'IBM Plex Sans medium', sans-serif;
 	margin: 0px; 
 }
 .box--title_box--logo{
+	height: 8vh;
+	display: flex; 
+	justify-content: center; 
+	align-items: center;
 	background-color: #241f1c; 
 }
 .box--logo_img{
-	width: 40%; 
-	height: 50px; 
-	display: flex; 
-	justify-content: center; 
-	align-items: center; 
+	width: 85%; 
 	color: #fff; 
 	font-size: 1em;
+	font-family: 'IBM Plex Sans', sans-serif;
 	margin: 0;
 }
 .box--title_form--vagas{
-	height: 200px;
+	height: 34vh;
 	display: flex;
 	flex-direction: row;
 	overflow:scroll;
@@ -40,25 +45,28 @@
     background: #dcdcdc;
 }
 .form--vagas_boxbar--colorful{
-	width: 100%;
+	width: 2%;
 }
 .boxbar--colorful_pink{
-	width: 2%;
-	height: 50px;
+	width: 100%;
+	height: 8.5vh;
 	background-color: #e95e73;	
 }
 .boxbar--colorful_blue{
-	width: 2%;
-	height: 50px;
+	width: 100%;
+	height: 8.5vh;
 	background-color: #51c2c6;
 }
 .boxbar--colorful_green{
-	width: 2%;
-	height: 50px;
+	width: 100%;
+	height: 8.5vh;
 	background-color: #e1c233;
 }
 .boxbar--colorful_orange{
-	width: 2%;
-	height: 50px;
+	width: 100%;
+	height: 8.5vh;
 	background-color: #ff8100;
+}
+#listaDeVagas{
+	width: 100%
 }
