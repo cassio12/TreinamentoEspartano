@@ -102,12 +102,11 @@ function renderMain(){
 		}
 	]
 
-	console.log('dados', dados);
+	// console.log('dados', dados);
 	let cont = 0;
 	let array = ['ola','tchau','quem','como']
 	let nObj = dados.length;
 	let idsVaga = [];
-	// console.log(ulLista)
 	
 	for (let i = 0; i <= nObj; i++) {
 		let listaDeVagas = document.getElementById('listaDeVagas')
@@ -117,13 +116,11 @@ function renderMain(){
 		let textNomes = document.createElement('p')
 		namesVaga = dados[cont].opportunity.name
 		textNomes = document.createTextNode(namesVaga)
-		// textNomes.style.fontSize = "1em"
 
 		let textVagaNomes = document.createElement('p')
 		namesCompany = dados[cont].opportunity.company_name
 		textVagaNomes = document.createTextNode(namesCompany)
-		// textVagaNomes.style.fontSize = "1em"
-		console.log(namesCompany)
+		// console.log(namesCompany)
 
 		let liLista = document.createElement('li')
 
@@ -134,27 +131,44 @@ function renderMain(){
 		ulLista.style.flexDirection = "column"
 		ulLista.style.padding = "0px 0px 0px 0px"
 		ulLista.style.alignItems = "flex-end"
-		// ulLista.style.width = "90%"
-		// ulLista.style.justifyContent = "center"
+    ulLista.style.fontSize = "1.5em"
+		// ulLista.style.hover = "height: 20vh;"
 
+		liLista.style.display = "flex"
+		liLista.style.justifyContent = "center"
+		liLista.style.alignItems = "center"
 		liLista.style.padding = "5px 0px 0px 0px"
 		liLista.style.height = "8.5vh"
-		// liLista.style.fontSize = "1.5em"
 		liLista.style.color = "white"
 		liLista.style.width = "98.5%"
 		liLista.style.backgroundColor = "#38332f"
+		// liLista.style.fontSize = "1.5em"
 		
 		liLista.appendChild(textNomes)
 		// liLista.appendChild(textVagaNomes)
+		console.log(liLista)
 		ulLista.appendChild(liLista)
-		// liLista.appendChild(idsVaga)
-		// console.log(idsVaga) 
-		// console.log(liLista) 
-		console.log(ulLista)
-		// let inpar = 0
-		// let par = 1
+
+
+		liLista.addEventListener("mouseover", function( event ) {   
+			ulLista.style.color = "white"
+	    ulLista.style.height = "20vh";
+	    ulLista.appendChild(textVagaNomes)
+	    setTimeout(function() {
+	      
+	    }, 500);
+	  }, false);
+	  
+	  
+	  ulLista.addEventListener("mouseout", function( event ) {   
+	    ulLista.style.height = "8.5vh";
+	    textVagaNomes.remove()
+	    setTimeout(function() {
+	      
+	    }, 500);
+	  }, false);
+
 		if(cont%2 == 0){
-			console.log('par')
 			ulLista.style.backgroundColor = "#ed5d6c"
 		}
 		if(cont == 2){
@@ -162,23 +176,9 @@ function renderMain(){
 		}
 		if(cont%2 == 1){
 			ulLista.style.backgroundColor = "#52c2c5"
-			console.log('impar')
 		}
-		// console.log(namesVaga)
-		// if (idsVaga == dados[cont].opportunity.id){
-		// 	console.log(dados[cont].opportunity.name)
-		// 	console.log(dados[cont].opportunity.published_at)
-		// 	console.log(dados[cont].opportunity.company_name)
-		// 	console.log(dados[cont].opportunity.permalink)
-		// }
-		// else{
-		// 	console.log('não é 	')
-		// }
-		// console.log(idsVaga) 	
-		// console.log(opportunity)
+		
 		cont++
 	}
-	// console.log(opportunity)
-	// console.log(idsVaga)
 }
 document.onload = renderMain()
