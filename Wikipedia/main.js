@@ -210,19 +210,27 @@ function renderMain(){
 		let el = document.createElement(elemento);
 		return el
 	}
-	function styleTag(){
-		
+	function styleTag(el, value){
+		let valor = value;
+		let elemento = el ;
+		//let stilizacao = attribute;
+
+		console.log(elemento)
+		//console.log(stilizacao)
+		console.log(value)
+		elemento.style.height = value;
+		return elemento;
 	}
 
 	
-	let tag = creatTag('form')
+	let form = creatTag('form')
 	let imputEntrada = creatTag('imput')
 
-	imputEntrada.setAttribute('type', 'submit')
+	// imputEntrada.setAttribute('type', 'submit')
+	styleTag(form, '45vh')
+	form.appendChild(imputEntrada)
+	document.body.appendChild(form)
 	
-	tag.appendChild(imputEntrada)
-	document.body.appendChild(tag)
-	tag.style.height = '45vh'
 }
 document.window = renderMain()
 
