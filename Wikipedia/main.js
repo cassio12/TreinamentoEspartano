@@ -210,15 +210,15 @@ function renderMain(){
 		let el = document.createElement(elemento);
 		return el
 	}
-	function styleTag(el, value){
+	function styleTag(el, jan,value){
 		let valor = value;
 		let elemento = el ;
-		//let stilizacao = attribute;
+		let stilizacao = jan;
 
 		console.log(elemento)
-		//console.log(stilizacao)
+		console.log(stilizacao)
 		console.log(value)
-		elemento.style.height = value;
+		elemento.style.stilizacao = value;
 		return elemento;
 	}
 
@@ -227,7 +227,7 @@ function renderMain(){
 	let imputEntrada = creatTag('imput')
 
 	// imputEntrada.setAttribute('type', 'submit')
-	styleTag(form, '45vh')
+	styleTag(form, 'height','45vh')
 	form.appendChild(imputEntrada)
 	document.body.appendChild(form)
 	
