@@ -210,27 +210,37 @@ function renderMain(){
 		let el = document.createElement(elemento);
 		return el
 	}
-	function styleTag(el, jan,value){
-		let valor = value;
-		let elemento = el ;
-		let stilizacao = jan;
-
-		console.log(elemento)
-		console.log(stilizacao)
-		console.log(value)
-		elemento.style.stilizacao = value;
+	function attibute(elemento, atti, tyatt){
+		elemento.setAttribute(atti, tyatt)
 		return elemento;
 	}
-
 	
 	let form = creatTag('form')
-	let imputEntrada = creatTag('imput')
+	let inputEntrada = creatTag('input')
+	let subEntrada = creatTag('input')
 
-	// imputEntrada.setAttribute('type', 'submit')
-	styleTag(form, 'height','45vh')
-	form.appendChild(imputEntrada)
+		console.log(search.title)
+	subEntrada.addEventListener("click", function(){
+		event.preventDefault();
+		let valorEntrada = inputEntrada.value
+		// console.log(valorEntrada)
+		if (valorEntrada == search.title){
+			console.log("resultado da pesquisa: ", search)
+		}else{
+			console.log("pesquisa não encontrada	")
+		}
+
+
+
+		valorEntrada = " "
+	})
+
+	// inputEntrada.setAttribute('type', 'submit')
+	form.style.height = '45vh'
+	form.appendChild(inputEntrada)
+	form.appendChild(subEntrada)
+	attibute(subEntrada, 'type','submit')
 	document.body.appendChild(form)
-	
 }
 document.window = renderMain()
 
