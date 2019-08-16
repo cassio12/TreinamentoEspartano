@@ -215,22 +215,37 @@ function renderMain(){
 		return elemento;
 	}
 	
-	let form = creatTag('form')
-	let inputEntrada = creatTag('input')
-	let subEntrada = creatTag('input')
+	let form = creatTag('form');
+	let inputEntrada = creatTag('input');
+	let subEntrada = creatTag('input');
+	let titles;
+	
+	search.forEach(function (element, index, array) {
+		// console.log(array)
+		titles = element.title
+    	console.log(index, titles)
+    	return titles
+	});
+	// console.log(search)
 
-		console.log(search.title)
+	// search.map(function(){
+	// 	let titles = search.title
+	// 	console.log(titles)
+	// })
+
 	subEntrada.addEventListener("click", function(){
 		event.preventDefault();
 		let valorEntrada = inputEntrada.value
+		console.log("titles",titles)
+		// titles.map(function(){
+		// 	if (valorEntrada == titles){
+		// 		console.log("resultado da pesquisa: ", search)
+		// 	}else{
+		// 		console.log("pesquisa não encontrada	")
+		// 	}
+
+		// })
 		// console.log(valorEntrada)
-		if (valorEntrada == search.title){
-			console.log("resultado da pesquisa: ", search)
-		}else{
-			console.log("pesquisa não encontrada	")
-		}
-
-
 
 		valorEntrada = " "
 	})
