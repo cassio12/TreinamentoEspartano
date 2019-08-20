@@ -218,14 +218,15 @@ function renderMain(){
 	let form = creatTag('form');
 	let inputEntrada = creatTag('input');
 	let subEntrada = creatTag('input');
-	let titles;
+	let titles = [];
 	
 	search.forEach(function (element, index, array) {
 		// console.log(array)
-		titles = element.title
-    	console.log(index, titles)
+		titles.push(element.title)
+    	//console.log(index, titles)
     	return titles
 	});
+	// console.log(titles)
 	// console.log(search)
 
 	// search.map(function(){
@@ -233,21 +234,34 @@ function renderMain(){
 	// 	console.log(titles)
 	// })
 
+		//console.log("titles",titles)
+		// titles.map(function(){
+		// 	if ('Belgrade' != titles){
+		// 		console.log("pesquisa não encontrada", titles)
+		// 		cont++
+		// 	}else{
+		// 		console.log("resultado da pesquisa: ", titles[cont])
+		// 	}
+		// })
 	subEntrada.addEventListener("click", function(){
 		event.preventDefault();
+
+		let cont = 0
+		let titlesN = titles.length
 		let valorEntrada = inputEntrada.value
-		console.log("titles",titles)
-		// titles.map(function(){
+		console.log('valorEntrada',valorEntrada)
+		console.log('titlesN',titlesN)
+		console.log(titles)
+
+		// for(let i = 0; i < titlesN; i++){
 		// 	if (valorEntrada == titles){
-		// 		console.log("resultado da pesquisa: ", search)
+		// 		console.log("resultado da pesquisa: ", titles[cont])
 		// 	}else{
-		// 		console.log("pesquisa não encontrada	")
+		// 		console.log("pesquisa não encontrada", titles[cont])
+		// 		cont++
 		// 	}
-
-		// })
-		// console.log(valorEntrada)
-
-		valorEntrada = " "
+		// }
+		// valorEntrada = " "
 	})
 
 	// inputEntrada.setAttribute('type', 'submit')
