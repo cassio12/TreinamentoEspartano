@@ -215,6 +215,9 @@ function renderMain(){
 		return elemento;
 	}
 	
+	let h1_inHtml = document.getElementById('titles--artigo')
+	let p_inHtml = document.getElementById('paragrafo--artigo')
+	let label = creatEl('label', 'Busque um artigo')
 	let form = creatTag('form');
 	let inputEntrada = creatTag('input');
 	let subEntrada = creatTag('input');
@@ -226,6 +229,7 @@ function renderMain(){
     	//console.log(index, titles)
     	return titles
 	});
+
 	// console.log(titles)
 	// console.log(search)
 
@@ -250,22 +254,27 @@ function renderMain(){
 		let titlesN = titles.length
 		let valorEntrada = inputEntrada.value
 		console.log('valorEntrada',valorEntrada)
-		console.log('titlesN',titlesN)
+		// console.log('titlesN',titlesN)
 		console.log(titles)
 
-		// for(let i = 0; i < titlesN; i++){
-		// 	if (valorEntrada == titles){
-		// 		console.log("resultado da pesquisa: ", titles[cont])
-		// 	}else{
-		// 		console.log("pesquisa não encontrada", titles[cont])
-		// 		cont++
-		// 	}
-		// }
-		// valorEntrada = " "
+		for(let i = 0; i < titlesN; i++){
+			if (valorEntrada == titles[cont]){
+				console.log("resultado da pesquisa: ", titles[cont])
+				h1_inHtml.innerHTML = "resultado da sua pesquisa: " + titles[cont]
+				p_inHtml.innerHTML = search[cont].snippet
+				cont++
+
+			}else{
+				console.log("pesquisa não encontrada", titles[cont])
+				cont++
+			}
+		}
+		valorEntrada = ""
 	})
 
 	// inputEntrada.setAttribute('type', 'submit')
 	form.style.height = '45vh'
+	form.appendChild(label)
 	form.appendChild(inputEntrada)
 	form.appendChild(subEntrada)
 	attibute(subEntrada, 'type','submit')
