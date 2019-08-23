@@ -9,20 +9,45 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /*background-color: #282c34;*/
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /*align-items: center;*/
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.App-header_navegation{
+  width: 65%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+.navegation_boxImg{    
+  display: flex;
+  justify-content: flex-start;
+  width: 35%;
+  margin: 0;
+}
+.boxImg_logo{
+  width: 80%;
+}
+.navegation_boxlist{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+}
+.boxlist_itemList{
+  color: #a4a4a4;
+}
 .App-link {
   color: #61dafb;
 }
-
+/*
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -31,3 +56,4 @@
     transform: rotate(360deg);
   }
 }
+*/
