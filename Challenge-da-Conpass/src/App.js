@@ -27,6 +27,11 @@ function App() {
               <button className="boxBtn_btn">Create Hotspost</button>
             </div>
           </div>
+          <div className="sectionSendItens_box--centralization--list">
+            <div className="box--centralization--list_boxList">
+              <input className="boxList_inputList" placeholder="List of hotspost"></input>
+            </div>
+          </div>  
         </section>
       </main>
     </div>

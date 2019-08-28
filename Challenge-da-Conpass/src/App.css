@@ -26,11 +26,11 @@
 .navegation_boxImg{    
   display: flex;
   justify-content: flex-start;
-  width: 35%;
+  width: 45%;
   margin: 0;
 }
 .boxImg_logo{
-  width: 80%;
+  width: 75%;
 }
 .navegation_boxlist{
   width: 100%;
@@ -38,7 +38,7 @@
   justify-content: flex-start;
 }
 .boxlist_ul{
-  width: 70%;
+  width: 75%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,10 +54,12 @@
 }
 .main_sectionSendItens{
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .sectionSendItens_box--centralization{
   width: 100%;
-  height: 15vh;
+  height: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,13 +68,32 @@
   width: 50%;
 }
 .boxBtn_btn{
-  width: 30%;
+  width: 32.5%;
   height:7vh;
-  font-size: 1.3em;
+  font-size: 1.5em;
   border-radius: 40px ;
   border-width: 0px;
   background-color: #30c0c7;
   color: #fff;
+}
+.sectionSendItens_box--centralization--list{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.box--centralization--list_boxList{
+  width: 50%
+}
+.boxList_inputList{
+  width: 70%;
+  height: 5vh;
+  border-width: 0; 
+  font-size: 1.3em;
+  padding: 5px;
+  background-color: #ebebeb;
+}
+.boxList_inputList::placeholder{
+  color: #aaabaa;
 }
 .App-link {
   color: #61dafb;
