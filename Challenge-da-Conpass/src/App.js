@@ -2,6 +2,11 @@ import React from 'react';
 import logo from './logo.png';
 import './App.css';
 
+let pegarInput = () => {
+  let valueInput = document.getElementById('txtInput').value
+  console.log(valueInput)
+}
+
 function App() {
   return (
     <div className="App">
@@ -24,12 +29,12 @@ function App() {
         <section className="main_sectionSendItens">
           <div className="sectionSendItens_box--centralization">
             <div className="box--centralization_boxBtn">
-              <button className="boxBtn_btn">Create Hotspost</button>
+              <button className="boxBtn_btn" onClick={pegarInput}>Create Hotspost</button>
             </div>
           </div>
           <div className="sectionSendItens_box--centralization--list">
             <div className="box--centralization--list_boxList">
-              <input className="boxList_inputList" placeholder="List of hotspost"></input>
+              <input id="txtInput" className="boxList_inputList" placeholder="List of hotspost"></input>
             </div>
           </div>  
         </section>
